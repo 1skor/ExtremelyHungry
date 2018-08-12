@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <variable constant="0" name="EffectsOn" sid="368381310423159" static="0" type="number">1</variable>
+        <variable constant="0" name="Music" sid="161202298613776" static="0" type="number">0</variable>
+        <variable constant="0" name="Played" sid="126064369841468" static="0" type="number">0</variable>
+        <event-block sid="698073765142858">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="610549682969649" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="296581946535021" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="385256588039029">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="850777112206414" type="System">
+                    <param id="0" name="Variable">Played</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="162522806247019" type="yourscore">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="198424649042335" type="EffectsText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="333936297469744">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="215400927008095" type="System">
+                    <param id="0" name="Variable">Played</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="743945804301398" type="yourscore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="738195201552523" type="EffectsText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="698473668911103">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="562861161415969" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="680711789093325" type="yourscore">
+                    <param id="0" name="Text">&quot;Score:&quot; &amp; Eaten</param>
+                </action>
+                <action id="-9" name="Set value" sid="953070043936678" type="System">
+                    <param id="0" name="Variable">Eaten</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="680813820676487" type="System">
+                    <param id="0" name="Variable">TimeLeft</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-9" name="Set value" sid="538281410648444" type="System">
+                    <param id="0" name="Variable">Effect</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="736688122354200">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="686689231425654" type="System" />
+                <condition id="-14" name="Compare variable" sid="822086934300497" type="System">
+                    <param id="0" name="Variable">Music</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="326704261552007" type="Audio">
+                    <param id="0" name="Audio file">8bit</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="591364926896230" type="System">
+                    <param id="0" name="Variable">Music</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="943700978984101">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="820302822694006" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">EffectsText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="460963215704420" type="System">
+                    <param id="0" name="Variable">EffectsOn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="295836413402213">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="229991699391715" type="System">
+                    <param id="0" name="Variable">EffectsOn</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="924465195573811" type="System">
+                    <param id="0" name="Variable">EffectsOn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165025939709838">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="915303944100631" type="System">
+                    <param id="0" name="Variable">EffectsOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="281189118055539" type="EffectsText">
+                    <param id="0" name="Text">&quot;Effects: On&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="423389079322904">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="306384728999118" type="System">
+                    <param id="0" name="Variable">EffectsOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="127817028237314" type="EffectsText">
+                    <param id="0" name="Text">&quot;Effects: Off&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

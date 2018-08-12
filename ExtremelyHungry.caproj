@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>ExtremelyHungry</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>3k8y8jenijj4j</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Evan Wallace" id="dotscreen">Dot screen</effect>
+        <effect author="Scirra" id="noise">Noise</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1024</width>
+        <height>1024</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Player" sid="964721205621021">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="426616162147351">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="723539967795668">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="227169702796820">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="302101783651767" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\red-b\Desktop\Hungry\Player.png">
+                        <image-point name="ShootPoint" x="1.16667" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.977273" y="0.5" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="428762406744728">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Enemy" sid="218326957585827">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="620742742285146" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="693053063762739">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="592972698030663" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\red-b\Desktop\Hungry\Enemy.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.333333" y="0.5" />
+                            <point x="0.333333" y="0.5" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="355357031211555">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Audio" sid="585058058555776">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="TiledBackground" sid="386936101859033">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\background.png" />
+        </object-type>
+        <object-type name="Tilemap" sid="890332639410723">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="849345792238074">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\Tilemap.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TiledBackground2" sid="281005211051891">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\Light.png" />
+        </object-type>
+        <object-type name="Sprite" sid="766964849481821">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958940152095289" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Eaten" sid="280845741092916">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SecondsLeft" sid="301387876948183">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="EatenText" sid="562779178661827">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="SecondsLeftText" sid="428173603905399">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\Text.png" />
+        </object-type>
+        <object-type name="Menu" sid="919010872580583">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="307585172562375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\red-b\Desktop\Hungry\menu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Name" sid="958441418374652">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="menuback" sid="681063094793339">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131775850358319" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Start" sid="827805200652872">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\Text.png" />
+        </object-type>
+        <object-type name="yourscore" sid="676474359620088">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\Text.png" />
+        </object-type>
+        <object-type name="by" sid="250424606338763">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="EffectsText" sid="202255602271399">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\red-b\Desktop\Hungry\Text.png" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Game.xml</layout>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="16" />
+        <global-instance type="Keyboard" uid="17" />
+        <global-instance type="Audio" uid="33">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="8bit.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
